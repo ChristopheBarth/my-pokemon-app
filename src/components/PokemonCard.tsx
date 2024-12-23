@@ -18,8 +18,6 @@ function PokemonCard(props) {
         {/* Utilisation d'un ternaire pour vérifier si notre premier Pokemon a une photo */}
         {pokemon.imgSrc ? <img src= {pokemon.name}/> : <p>???</p>}
 
-        
-
         </figure>
         </>
     )
