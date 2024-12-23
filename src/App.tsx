@@ -8,6 +8,7 @@ function App() {
   return (
     <div>
       <PokemonCard pokemon={pokemon.name} />
+      {/* <PokemonCard key={pokemon.name} /> */}
     </div>
   );
 }
