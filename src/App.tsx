@@ -4,9 +4,11 @@ import PokemonCard from "./components/PokemonCard";
 
 
 function App() {
+  const pokemon = { name: "mew", imgSrc: null };
   return (
     <div>
-      <PokemonCard />
+      <PokemonCard pokemon={pokemon.name} />
+      {/* <PokemonCard key={pokemon.name} /> */}
     </div>
   );
 }
