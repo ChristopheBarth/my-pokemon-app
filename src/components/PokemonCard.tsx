@@ -1,7 +1,6 @@
-function PokemonCard(props) {
-    // console.log(props);
+function PokemonCard ( pokemon ) {
     
-    // const pokemon = pokemonList[0];
+    
      
 
     return (
@@ -22,8 +21,6 @@ function PokemonCard(props) {
         </>
     )
 }
-
-const pokemon = { name: "mew", imgSrc: null };
 
 const pokemonList = [
     {
