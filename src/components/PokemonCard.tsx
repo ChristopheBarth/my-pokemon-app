@@ -1,40 +1,32 @@
-interface PokemonProps {
-  name: string;
-  imgSrc?: string;
+const pokemonList = [
+  {
+    name: "bulbasaur",
+    imgSrc:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
+  },
+  {
+    name: "mew",
+  },
+];
 
-}
 
-function Pokemon({ name, imgSrc }: PokemonProps) {
-  return (
-    <p>
-      My pokemon is {name} 
-      {imgSrc != null && `, and my ${imgSrc}.`}
-    </p>
-  );
-}
 
-//import { useState } from "react";
-
-function App() {
+function PokemonCard() {
+  const pokemon= pokemonList[0]; 
   return (
     <>
       <figure>
-            {/* <img src={pokemon.imgSrc} alt={pokemon.name} /> */}
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"></img>
-
+           {pokemon.imgSrc ?  <img src={pokemon.imgSrc}></img> : <p>???</p>}
+           
         <figcaption>
 
-          <h2 className={Pokemon.name}>bulbasaur</h2> 
-          <h2 className={Pokemon.name}>mew</h2>
+          <h2>{pokemon.name}</h2> 
         
         </figcaption>
-
-        {/* Utilisation d'un ternaire pour vérifier si notre premier Pokemon a une photo */}
-        {Pokemon.imgSrc ? <img src= {Pokemon.name}/> : <p>???</p>}
 
       </figure>
     </>
   )
 }
 
-export default App;
+export default PokemonCard;
