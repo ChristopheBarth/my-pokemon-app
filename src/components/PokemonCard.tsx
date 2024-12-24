@@ -13,6 +13,8 @@ function Pokemon({ name, imgSrc }: PokemonProps) {
   );
 }
 
+//import { useState } from "react";
+
 function App() {
   return (
     <>
