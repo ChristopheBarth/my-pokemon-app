@@ -11,16 +11,23 @@ const pokemonList = [
 
 
 
-function PokemonCard() {
-  const pokemon= pokemonList[0]; {/* [1] */} 
+function PokemonCard ( pokemon ) {
+  {/* ajoute un paramètre props à la fonction PokemonCard */}
+ 
+  
+  {/* const pokemon= pokemonList[1] ici on a remplacé mon tableau pokemonList pour ne pas casser l'affichage par */} 
+  {/* const pokemon = { name: "mew", imgSrc: null }; on a supprimé cette ligne */}
   return (
     <>
       <figure>
-           {pokemon.imgSrc ?  <img src={pokemon.imgSrc}></img> : <p>???</p>}
-           {/* utilisation ici d'un ternaire pour vérifier si Mew à une image */} 
+           {/* utilisation ici d'un ternaire pour vérifier si Mew à une image */}
+           {pokemon.imgSrc ? <img src= {pokemon.imgSrc}></img> : <p>???</p>}
+            
         <figcaption>
 
-          <h2>{pokemon.name}</h2> 
+          {/* <h2>{pokemon.name}</h2>  */}
+          <h2 className={pokemon.name}>bulbasaur</h2>
+          <h2 className={pokemon.name}>mew</h2>
         
         </figcaption>
 
