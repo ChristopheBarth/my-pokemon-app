@@ -22,6 +22,7 @@ function PokemonCard ( pokemon ) {
       <figure>
            {/* utilisation ici d'un ternaire pour vérifier si Mew à une image */}
            {pokemon.imgSrc ? <img src= {pokemon.imgSrc}></img> : <p>???</p>}
+           <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"></img>
             
         <figcaption>
 
