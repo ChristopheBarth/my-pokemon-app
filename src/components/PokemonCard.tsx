@@ -1,4 +1,12 @@
-function PokemonCard({ pokemon }) {
+interface PokemonProps {
+  pokemon: {
+    name: string;
+    imgSrc?: string;
+  }
+}
+
+
+function PokemonCard({ pokemon }: PokemonProps) {
   {/* ajoute un paramètre props à la fonction PokemonCard */}
  
 
