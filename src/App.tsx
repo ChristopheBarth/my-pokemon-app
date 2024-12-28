@@ -46,8 +46,6 @@ import { useState } from "react";
 
       <h1>Index du Pokémon actuel : {pokemonIndex}</h1>
       {/* Ici on a ajouté des boutons pour changer la valeur de pokemonIndex*/}
-      {/* <button type="button" onClick={() => setPokemonIndex(pokemonIndex - 1)}>Précédent</button>
-      <button type="button" onClick={() => setPokemonIndex(pokemonIndex + 1)}>Suivant</button> */}
       {/* Ici la valeur de pokemonIndex est affichée et mise à jour dynamiquement à chaque changement*/}
 
       {/* Affiche le bouton "Précédent" uniquement s'il y a un précédent */}
