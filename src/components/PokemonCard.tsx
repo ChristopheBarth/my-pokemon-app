@@ -15,8 +15,8 @@ function PokemonCard({ pokemon }: PokemonProps) {
       <figure>
           
          
-          {/* <img src={pokemon.imgSrc} alt={pokemon.name}></img> */}
-          <img src={pokemon.imgSrc}></img>
+          <img src={pokemon.imgSrc} alt={pokemon.name}></img>
+          
 
         <figcaption>
  
