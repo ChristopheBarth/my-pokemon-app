@@ -11,21 +11,23 @@ const pokemonList = [
 
 
 
-function PokemonCard() {
-
+  function PokemonCard() {
+  {/* À l'intérieur de la fonction PokemonCard, crée une variable appelée pokemon : affecte-lui le premier Pokémon du tableau pokemonList */}
   const pokemon= pokemonList[1]; 
   return (
     <>
       <figure>
-           {pokemon.imgSrc ?  <img src={pokemon.imgSrc}></img> : <p>???</p>}
-           {/* utilisation ici d'un ternaire pour vérifier si Mew à une image */} 
+          {/* utilisation ici d'un ternaire pour vérifier si Mew à une image */}
+          {pokemon.imgSrc ? <img src={pokemon.imgSrc} alt={pokemon.name} /> : <p>???</p>}
+        
+      </figure>
+            
         <figcaption>
 
           <h2>{pokemon.name}</h2> 
         
         </figcaption>
 
-      </figure>
     </>
   )
 }
