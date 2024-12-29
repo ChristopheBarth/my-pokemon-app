@@ -32,30 +32,40 @@ import { useState } from "react";
 
   function App() {
     const [pokemonIndex, setPokemonIndex] = useState(0);
-    {/* Ici on dans le composant App, on a crée un state pokemonIndex en utilisant un état (useState). Initialise ce state à 0.*/}
+    {/* Ici dans le composant App, on a crée un state pokemonIndex en utilisant un état (useState). Initialise ce state à 0.*/}
+
+    {/* Dans le composant App, ajoute deux boutons, l'un avec le texte "Précédent" et l'autre avec le texte "Suivant" */}
+    const handleClickNext = () => {
+      setPokemonIndex(pokemonIndex + 1);
+    };
+    const handleClickPrevious = () => {
+      setPokemonIndex(pokemonIndex - 1);
+    };
   
 
   return (
     <div>
       {/* Ici on a crée une prop appelée pokemon et on lui attribue un Pokémon du tableau pokemonList */}
-      <PokemonCard pokemon={pokemonList[0]} />
-      <PokemonCard pokemon={pokemonList[1]} />
-      <PokemonCard pokemon={pokemonList[2]} />
-      <PokemonCard pokemon={pokemonList[3]} />
-      <PokemonCard pokemon={pokemonList[4]} />
-
-      <h1>Index du Pokémon actuel : {pokemonIndex}</h1>
+      <PokemonCard pokemon={pokemonList[pokemonIndex]} />
+      
       {/* Ici on a ajouté des boutons pour changer la valeur de pokemonIndex*/}
       {/* Ici la valeur de pokemonIndex est affichée et mise à jour dynamiquement à chaque changement*/}
-
       {/* Affiche le bouton "Précédent" uniquement s'il y a un précédent */}
-      {pokemonIndex > 0 && (
-        <button type="button" onClick={() => setPokemonIndex(pokemonIndex - 1)}>Précédent</button>
+      {pokemonIndex > 0 ? (
+        <button type="button" onClick={handleClickPrevious}>
+          précédent
+        </button>
+      ) : (
+        <p> </p>
       )}
 
       {/* Affiche le bouton "Suivant" uniquement s'il y a un suivant */}
-      {pokemonIndex < pokemonList.length - 1 && (
-        <button type="button" onClick={() => setPokemonIndex(pokemonIndex + 1)}>Suivant</button>
+      {pokemonIndex < pokemonList.length - 1 ? (
+        <button type="button" onClick={handleClickNext}>
+          suivant
+        </button>
+      ) : (
+        <p> </p>
       )}
 
     </div>

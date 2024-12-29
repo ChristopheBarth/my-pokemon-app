@@ -1,4 +1,4 @@
-interface PokemonProps {
+interface PokemonCardProps {
   pokemon: {
     name: string;
     imgSrc?: string;
@@ -6,28 +6,23 @@ interface PokemonProps {
 }
 
 
-function PokemonCard({ pokemon }: PokemonProps) {
+function PokemonCard({ pokemon }: PokemonCardProps) {
   {/* ajoute un paramètre props à la fonction PokemonCard */}
  
 
   return (
     <>
       <figure>
-          
-         
-          {/* <img src={pokemon.imgSrc} alt={pokemon.name}></img> */}
-          <img src={pokemon.imgSrc}></img>
+        {/* utilisation ici d'un ternaire pour vérifier si Mew à une image */}
+        {pokemon.imgSrc ? <img src={pokemon.imgSrc} alt={pokemon.name} /> : <p>???</p>}
+      </figure>
 
-        <figcaption>
+      <figcaption>
  
           <h2>{pokemon.name}</h2>
                 
-        </figcaption>
-
-        {/* utilisation ici d'un ternaire pour vérifier si Mew à une image */}
-        {pokemon.imgSrc ? <img src= {pokemon.name}></img> : <p>???</p>}
-        
-      </figure>
+      </figcaption>
+            
     </>
   )
 }
