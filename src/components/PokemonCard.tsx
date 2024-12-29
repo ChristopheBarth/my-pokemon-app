@@ -1,34 +1,20 @@
-function PokemonCard(props) {
-
+function PokemonCard() {
+{/* Dans le fichier PokemonCard.tsx, crée un composant React appelé PokemonCard. Ce composant doit contenir une balise <figure>.*/}
     return (
         <>
         <figure>
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"></img>
-        
-
-        <figcaption>
-            <h2 className={pokemon.name}>bulbasaur</h2>
-            <h2 className={pokemon.name}>mew</h2>
-        </figcaption>
-
-        {/* utilisation d'un ternaire pour vérifier si notre premier pokemon a une photo */}
-        {PokemonCard.imgSrc ? <img src= {pokemon.name}/> : <p>???</p>}
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" alt="bulbasaur"></img>
+             {/* ajout de ma balise <img> qui représente bulbasaur */}
 
         </figure>
+        
+        <figcaption>
+            <h2>bulbasaur</h2>
+            {/* ajout de ma balise <figcaption> qui représente le nom du Pokemon affiché sous l'image */}
+        </figcaption>
+
         </>
     )
-}
-
-const pokemon = { name: "mew", imgSrc: null };
-
-const pokemonList = [
-  {
-    name: "bulbasaur",
-    imgSrc: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
-  },
-  {
-    name: "mew",
-  }
-];
+};
 
 export default PokemonCard;
