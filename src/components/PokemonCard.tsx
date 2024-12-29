@@ -1,5 +1,6 @@
 function PokemonCard({ pokemon }) {
   {/* ajoute un paramètre props à la fonction PokemonCard */}
+  console.log(pokemon);
  
 
   return (
@@ -7,19 +8,17 @@ function PokemonCard({ pokemon }) {
       <figure>
           
          
-          {/* <img src={pokemon.imgSrc} alt={pokemon.name}></img> */}
-          <img src={pokemon.imgSrc}></img>
+          {/* utilisation ici d'un ternaire pour vérifier si Mew à une image */}
+          {pokemon.imgSrc ? <img src={pokemon.imgSrc} alt={pokemon.name} /> : <p>???</p>}
 
-        <figcaption>
+      </figure>
+
+      <figcaption>
  
           <h2>{pokemon.name}</h2>
                 
-        </figcaption>
-
-        {/* utilisation ici d'un ternaire pour vérifier si Mew à une image */}
-        {pokemon.imgSrc ? <img src= {pokemon.name}></img> : <p>???</p>}
+      </figcaption>
         
-      </figure>
     </>
   )
 }

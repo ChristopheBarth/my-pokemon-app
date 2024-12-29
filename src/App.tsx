@@ -20,7 +20,6 @@ import PokemonCard from "./components/PokemonCard";
     <div>
       {/* Ici on a crée une prop appelée pokemon et on lui attribue un Pokémon du tableau pokemonList */}
       <PokemonCard pokemon={pokemonList[0]} />
-      <PokemonCard pokemon={pokemonList[1]} />
 
     </div>
   );
