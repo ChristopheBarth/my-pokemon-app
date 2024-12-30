@@ -1,6 +1,8 @@
 import "./App.css";
 import PokemonCard from "./components/PokemonCard";
+import NavBar from "./components/NavBar";
 import { useState } from "react";
+
 
 
   {/* Ici on déplacé le tableau pokemonList du composant PokemonCard vers App.tsx */}
@@ -40,23 +42,14 @@ import { useState } from "react";
     <div>
 
       <nav>
-      {/* Ici on ajouté notre méthode map pour parcourir pokemonList dans la partie nav */}
-      {pokemonList.map((pokemon, i) => (
-        <button 
-        onClick={() => setPokemonIndex(i)}
-        value={pokemon.name}
-        key={pokemon.name}
-        type="button"
-        >
-        {pokemon.name}
-        </button>       
-      ))}
+      <NavBar setPokemonIndex={setPokemonIndex} pokemonList={pokemonList} />
+      {/* Ici on a envoyé les valeurs à NavBar  */}
       </nav>
       
       <section>
       <PokemonCard pokemon={pokemonList[pokemonIndex]}/>
       </section>
-      
+      {/* Et enfin on a supprimé nos boutons ici dans App vu qu'ils sont fonctionnels dans NavBar.tsx */}
     </div>
   );
 }
