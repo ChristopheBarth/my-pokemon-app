@@ -21,7 +21,7 @@ function NavBar(
       
         <nav>
             {/* Ici on a copié nos boutons dans App.tsx pour les coller ici */}
-            {pokemonList.map((pokemon, i) => (
+            {pokemonList.map((pokemon: Pokemon, i) => (
             <button 
             onClick={() => setPokemonIndex(i)}
             value={pokemon.name}

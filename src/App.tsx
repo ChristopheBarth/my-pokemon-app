@@ -1,7 +1,7 @@
 import "./App.css";
 import PokemonCard from "./components/PokemonCard";
 import NavBar from "./components/NavBar";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 
@@ -34,7 +34,13 @@ import { useState } from "react";
 
   function App() {
     const [pokemonIndex, setPokemonIndex] = useState(0);
-  
+    {/* Ici on a utilisé une alerte au démarrage avec le hook useEffect */}
+    useEffect(() => {
+      alert("hello pokemon trainer :)");
+    },[]);
+    {/* Ici on a utilisé une deuxième alerte pour pikachu mais sans le useEffect */}
+    if (pokemonIndex === 3) { alert("pika pikachu !!!");
+    }
 
   
 
