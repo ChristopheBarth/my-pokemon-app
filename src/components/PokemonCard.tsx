@@ -1,16 +1,29 @@
-function PokemonCard() {
+function PokemonCard({ pokemon }) {
+  {/* ajoute un paramètre props à la fonction PokemonCard */}
+  console.log(pokemon);
+ 
 
-    return (
-        <>
-        <figure>
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" alt="Bulbasaur" />
-        </figure>
+  return (
+    <>
+      <figure>
+          
+         
+          {/* utilisation ici d'un ternaire pour vérifier si Mew à une image */}
+          {pokemon.imgSrc ? <img src={pokemon.imgSrc} alt={pokemon.name} /> : <p>???</p>}
 
-        <figcaption>
-            <h2 className="firstname">Bulbasaur</h2>
-        </figcaption>
-        </>
-    )
+      </figure>
+
+      <figcaption>
+ 
+          <h2>{pokemon.name}</h2>
+                
+      </figcaption>
+        
+    </>
+  )
 }
 
 export default PokemonCard;
+
+
+
